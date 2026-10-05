@@ -16,6 +16,7 @@ class Menstruation(models.Model):
     cycle = models.ForeignKey(CycleMenstruel, verbose_name="Cycle", on_delete=models.CASCADE, related_name='menstruations')
     date_debut = models.DateField()
     date_fin = models.DateField(null=True, blank=True)
+    duree_periode_regles = models.PositiveIntegerField(null=True, blank=True, min_value=3, max_value=9)
     estimation_prochaine_menstruation = models.DateField(null=True, blank=True)
     symptomes = models.ManyToManyField('Symptome', through='RessentirSymptome', blank=True)
 
