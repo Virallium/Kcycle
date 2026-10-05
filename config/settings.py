@@ -57,6 +57,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -163,11 +164,11 @@ MAILERS = {
     },
 }
 
-# CORS — pour autoriser Flutter à appeler ton API
+# CORS — pour autoriser Flutter à appeler mon API
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # pour tes tests web
+    "http://localhost:3000",  # pour mes tests web
 ]
-# En dev, tu peux aussi mettre CORS_ALLOW_ALL_ORIGINS = True temporairement
+# En dev, je peux aussi mettre CORS_ALLOW_ALL_ORIGINS = True temporairement
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
