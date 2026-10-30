@@ -223,5 +223,8 @@ class Profile(models.Model):
     Adresse = models.CharField(verbose_name='Adresse', max_length=150, null=True, blank=True)
     email = models.EmailField(verbose_name='Email', max_length=254, null=True, blank= True)
     date_Inscription= models.DateField(verbose_name='Date d\'inscription', auto_now_add=True)
-    telephone = models.CharField(verbose_name='Telephone', max_length=20, null=True, blank=True) 
+    telephone = models.CharField(verbose_name='Telephone', max_length=20, null=True, blank=True)
+    consentement_date = models.DateTimeField(
+        verbose_name="Date de consentement", null=True, blank=True
+    ) 
     

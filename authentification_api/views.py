@@ -8,6 +8,8 @@ from .serializers import ProfileSerializer, RegistrationSerializer
 class RegistrationView(generics.CreateAPIView):
 	serializer_class = RegistrationSerializer
 	permission_classes = (AllowAny,)
+ 
+
 
 
 class ProfileViewSet(viewsets.ModelViewSet):
