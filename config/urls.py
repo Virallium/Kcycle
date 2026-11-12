@@ -31,7 +31,7 @@ urlpatterns = [
     path('api/chatbot/', include('chatbot.urls')),
     path('api/b2b/', include('B2B.urls')),
     path('api/payements/', include('payements.urls')),
-    path('api/contenus-educations/', include('contenus_educations.urls')),
+    path('api/contenus/', include('contenus_educations.urls')),
 ]
 urlpatterns +=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
